@@ -1,0 +1,304 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-family: cursive;
+  color: white;
+  text-shadow: black 5px 5px 10px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+.transitionToLevel2, .transitionToLevel3{
+  text-align: center;
+}
+
+.transitionToNewGame{
+  text-align: center;
+  height: 15vh;
+
+}
+.tryAgainLevel1, .tryAgainLevel2, .tryAgainLevel3{
+  text-align: center;
+}
+
+header{
+  text-align: center;
+}
+
+ul{
+  display: inline-block; 
+}
+
+nav{
+  opacity: 0.85;
+}
+
+nav ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+
+}
+
+nav ul li a{
+  display: block;
+}
+
+nav ul li ul{
+  display: none;
+  position: absolute;
+  background-color: #e57373;
+  border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul{
+  display: block;
+}
+
+nav ul li ul li a{
+  padding: 0px 12px;
+  width: 50;
+}
+
+footer{ 
+  color: white;
+  background: black;
+  padding-bottom: 0.01rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.mainmenu-background {
+  background-image: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-wallpaper-background-027.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.level1-background {
+  background-image: url("https://i.ytimg.com/vi/bnflgZtuMcY/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  opacity: 1;
+}
+
+.level2-background {
+  background-image: url("https://d.newsweek.com/en/full/1826075/still-season-5-rick-morty.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.level3-background {
+  background-image: url("https://images6.alphacoders.com/909/thumb-1920-909641.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.about-background{
+  background-image: url("https://wallpapercave.com/wp/wp1822724.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  opacity: 0.9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin:0;
+  background: radial-gradient(#2196F3, grey);
+}
+
+.page-title {
+  font-family: cursive;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  color: aliceblue;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  font-size: 200%;
+}
+
+.game-info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.puzzle:hover .card-value {
+  transform: rotateY(180deg);
+}
+
+.game-info {
+  color: white;
+  text-shadow: black 5px 5px 10px;
+  font-family: cursive;
+  text-align: center;
+  font-size: 1.5em;
+} 
+
+.game-container-level1 {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.game-container-level2 {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.game-container-level3 {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.game-transition {
+  height: 100%;
+  width: 100%;
+}
+
+.design-doc {
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  background-color: transparent !important;
+  position: relative;
+  height: 175px;
+  width: 125px;
+}
+
+.card:hover {
+cursor: pointer;
+}
+
+.card.is-flipped {
+  transform: pointer rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  overflow: hidden;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-back, .card-front {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+}
+
+.card-back {
+  background-color: black;
+  border-color: gray;
+}
+
+.card-front {
+  position: absolute;
+  background-color: white;
+}
+
+.puzzle {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  transform: width 100ms ease-in-out height
+  100ms ease-in-out;
+}
+
+.card-back:hover .puzzle {
+  position: absolute;
+  width: 102%;
+  height: 72%;
+}
+
+.card-back:hover .space {
+  position: absolute;
+  width: 102%;
+  height: 72%;
+}
+
+.card-value {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: width 100ms ease-in-out, height
+  100ms ease-in-out;
+}
+
+.card-front:hover .card-value {
+  position: absolute;
+  width: 102%;
+  height: 102%;
+}
+
+.button{
+width: 200px;
+height: 200px;
+padding: 10px;
+text-align: center;
+right: 16px;
+}
+
+.nextlevel3{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+
+}
+

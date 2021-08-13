@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">
+    </script>
+	</head>
+<nav>
+  <ul>
+    <li><a class = "nav-button">Main Menu</a></li>
+    <li><a href="#">Levels</a>
+        <ul>
+          <li><a class="nav-button2">Level 1</a></li>
+          <li><a  class="nav-button3">Level 2</a></li>
+        </ul>
+        <li><a href="about.html">About</a>   
+    </li>
+   </ul>
+</nav>
+
+	<body class = "level3-background">
+    <h1 Class="page-title"> Matching Rick & Morty</h1>
+
+	<div class="game-container-level3">
+		<div class="game-info-container">
+			<div class="game-info">
+				Time <span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        Triplets Found: <span id="correct-triplets">0/12</span>
+      </div>
+    </div>
+
+    <div class="game-transition" style="display: none;">
+      <img class="start-game" src="/gifs/start-game.gif" style="display: none;">
+      <img class="victory" src="/gifs/victory.gif" style="display: none;">
+      <img class="failure" src="/gifs/failure.gif" style="display: none;">
+    </div>
+
+	  <div class="card"  id="rick10-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick10.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick3-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick3.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+
+    <div class="card"  id="rick1-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick1.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+	  <div class="card"  id="rick7-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick7.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+
+	  <div class="card"  id="rick11-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick11.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+	  <div class="card"  id="rick2-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick2.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+		
+    <div class="card"  id="rick12-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick12.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+    <div class="card"  id="rick3-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick3.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick7-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick7.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick8-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick8.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick4-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick4.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick6-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick6.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick9-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick9.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick5-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick5.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick11-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick11.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+		
+		<div class="card"  id="rick6-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick6.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick9-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick9.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick5-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick5.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick7-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick7.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick5-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick5.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick1-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick1.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick8-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick8.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick2-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick2.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick10-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick10.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick4-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick4.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick8-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick8.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick9-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick9.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick3-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick3.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick6-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick6.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick10-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick10.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick2-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick2.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick11-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick11.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+    <div class="card"  id="rick12-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick12.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick1-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick1.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+		<div class="card"  id="rick12-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick12.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+
+	  <div class="card"  id="rick4-c">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/rick-images/rick4.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/cover3.jpg">
+      </div>
+    </div>
+  </div>
+
+  <div class="transitionToNewGame" style="display:none"> 
+    <button
+     onclick="location.href='https://ver-count-the-numbers.elvis9312.repl.co/'" class="btn-large red lighten-2 waves-effect waves-light " id="newgame" name="action">NEW GAME
+    </button>
+  </div>
+
+  <div class="tryAgainLevel3" style="display:none"> 
+    <button
+     onclick="location.href='level3.html'" class="btn-large indigo waves-effect waves-light " id="restartgame" name="action">TRY AGAIN
+    </button>
+  </div>
+
+  <script src="/scripts/script.js"></script>
+	<script src="/scripts/level3.js"></script>
+</body>
+
+</html>
+ 

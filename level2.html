@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">
+    </script>
+	</head>
+<nav>
+  <ul>
+    <li><a class = "nav-button">Main Menu</a></li>
+    <li><a href="#">Levels</a>
+        <ul>
+          <li><a class="nav-button2">Level 1</a></li>
+          <li><a class="nav-button4">Level 3</a></li>
+        </ul>
+      <li><a href="about.html">About</a> 
+    </li>
+   </ul>
+</nav>
+
+	<body class="level2-background">
+    <h1 Class="page-title"> Matching Country Flags</h1>
+
+	<div class="game-container-level2 row">
+		<div class="game-info-container">
+			<div class="game-info">
+				Time <span id="time-remaining">100</span>
+   </div>
+   <div class="game-info">
+      Pairs Found: <span id="correct-pairs">0/10</span>
+   </div>
+  </div>
+
+  <div class="game-transition" style="display: none;">
+      <img class="start-game" src="/gifs/start-game.gif" style="display: none;">
+      <img class="victory" src="/gifs/victory.gif" style="display: none;">
+      <img class="failure" src="/gifs/failure.gif" style="display: none;">
+  </div>
+
+  
+    <div class="card" id="greece-a">
+		
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag1.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+    <div class="card" id="England-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag7.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+   <div class="card"  id="Brazil-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag2.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+		<div class="card" id="White-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag10.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+    <div class="card" id="American-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag3.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+		<div class="card" id="Grenada-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag8.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+		 <div class="card" id="American-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag3.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+     <div class="card" id="Guinea-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag5.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+		
+		  <div class="card" id="Nigerian-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag6.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+		 <div class="card" id="kenya-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag4.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+	 <div class="card" id="greece-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag1.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+    <div class="card" id="Nigerian-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag6.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+ 	   <div class="card" id="England-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag7.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+	   <div class="card" id="Jamaica-a">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag9.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+		<div class="card" id="Grenada-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag8.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+    <div class="card" id="Brazil-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag2.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+ <div class="card" id="Jamaica-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag9.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+     <div class="card" id="Guinea-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag5.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+     <div class="card" id="White-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag10.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+
+	 <div class="card" id="kenya-b">
+      <div class="card-back card-face back">
+        <img class="puzzle" src="images/flag-images/flag4.jpg">
+      </div>
+      <div class="card-front card-face front">
+        <img class="card-value" src="images/flag-images/cover2.jpg">
+      </div>
+    </div>
+ </div>
+<!-- @Idowu Add your button after this line-->
+
+  <div class="transitionToLevel3" style="display:none"> 
+    <button
+     onclick="location.href='level3.html'" class="btn-large red lighten-2 waves-effect waves-light" name="action">NEXT LEVEL
+    </button>
+    <button
+     onclick="location.href='https://ver-count-the-numbers.elvis9312.repl.co/'" class="btn-large red lighten-2 waves-effect waves-light" id="newgame" name="action">NEXT ROOM
+    </button>
+  </div>
+
+	<div class="tryAgainLevel2" style="display:none">
+    <button>
+      <a href="level2.html" id ="restartgamelevel2" class="waves-effect waves-light btn light green ">TRY AGAIN</a>
+    </button>
+  </div>
+ 
+  <script src="/scripts/script.js"></script>
+	<script src="/scripts/level2.js"></script>
+</body>
+
+</html>
+ 
